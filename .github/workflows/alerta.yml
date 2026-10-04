@@ -1,0 +1,26 @@
+
+name: Notificacion DevOps ITLA
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Ejecutar Hola Mundo
+        run: node main.js
+
+      - name: Enviar notificacion a ntfy
+        run: |
+          curl -H "Title: Practica 4 - Integracion Continua" \
+               -H "Priority: default" \
+               -H "Tags: rocket" \
+               -d "Se ha subido codigo al repositorio. GitHub Actions ejecuto correctamente la practica." \
+               https://ntfy.sh/devops
