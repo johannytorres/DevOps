@@ -23,4 +23,4 @@ jobs:
                -H "Priority: default" \
                -H "Tags: rocket" \
                -d "Se ha subido codigo al repositorio. GitHub Actions ejecuto correctamente la practica." \
-               https://ntfy.sh/devops
+               https://ntfy.sh/devops-itla
