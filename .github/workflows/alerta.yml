@@ -19,7 +19,7 @@ jobs:
 
       - name: Enviar notificacion a ntfy
         run: |
-          curl -H "Title: Practica 4 - Integracion Continua" \
+          curl -H "Title: Practica 4 - Johanny Torres" \
                -H "Priority: default" \
                -H "Tags: rocket" \
                -d "Se ha subido codigo al repositorio. GitHub Actions ejecuto correctamente la practica." \
